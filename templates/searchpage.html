@@ -1,0 +1,31 @@
+{% extends 'basepage.html' %}
+{% block body %}
+
+<body>
+  <div class="container">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Product Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Review Heading</th>
+          <th scope="col">Review Comments</th>
+        </tr>
+        </tr>
+      </thead>
+      <tbody>
+        {% for review in search_results %}
+        <tr>
+          <td>{{review[0]}}</td>
+          <td>{{review[1]}}</td>
+          <td>{{review[2]}}</td>
+          <td>{{review[3]}}</td>
+          <td>{{review[4]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+{% endblock body %}
